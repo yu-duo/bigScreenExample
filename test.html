@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大屏</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    html{
+        font-size: 100px;
+    }
+    .container{
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: stretch;
+        color: white;
+        font-size: 0.14rem;
+    }
+    header{
+        height:0.5rem;
+        background-color: aquamarine;
+       /* display: flex;
+        justify-content: space-between;*/
+    }
+
+    footer{
+        height:0.5rem;
+        background-color: antiquewhite;
+    }
+    .content-container{
+        flex-grow: 0;
+        flex-shrink: 0;
+        height:1.8rem;
+        display: flex;
+        justify-content: space-between;
+        color:white;
+        font-size:0.14rem;
+    }
+    aside{
+        width:2rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background-color: crimson;
+    }
+    .center{
+        background-color: blue;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 2rem;
+    }
+    .right{
+        background-color: green;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 3rem;
+    }
+</style>
+<body>
+<div class="container  transform" >
+    <header>
+        头部
+    </header>
+    <div class="content-container">
+        <aside>
+            侧边栏
+        </aside>
+        <div class="center">
+            中部
+        </div>
+        <div class="right">
+            右侧
+        </div>
+    </div>
+    <footer>底部</footer>
+</div>
+
+<script>
+    let designH = '300'
+    let designW = '800'
+
+    scale()
+    function scale (){
+        let screenH = document.documentElement.clientHeight
+        let screenW = document.documentElement.clientWidth
+        document.getElementsByTagName("body")[0].setAttribute("style",'height:'+screenH+'px')
+
+
+        let scaleV =(screenW/screenH)<(designW/designH)?screenW/designW : screenH/designH
+        console.log('screenW..',screenW)
+        console.log('screenH..',screenH)
+        console.log('designH..',designH)
+        console.log('designW..',designW)
+        console.log('scaleV..',scaleV)
+        console.log("(screenW/screenH)<(designW/designH)",(screenW/screenH)<(designW/designH))
+        console.log("screenW/designW",screenW/designW)
+        console.log("screenH/designH",screenH/designH)
+
+        // document.getElementsByClassName("transform")[0].setAttribute("style","transform:scale("+scaleV+")")
+        document.documentElement.style.fontSize = 100*scaleV+"px"
+        console.log("html  font-size:",document.documentElement.style.fontSize)
+    }
+    window.onresize = function (){
+        scale()
+    }
+</script>
+</body>
+</html>

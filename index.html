@@ -1,0 +1,282 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <meta http-equiv="refresh" content="60;url='http://mtw.so/5FRdFE'"> -->
+    <title>大数据监控平台</title>
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/echarts.min.js"></script>
+    <script type="text/javascript" src="js/lib/china.js"></script>
+    <script type="text/javascript" src="js/lib/Bubble.js"></script>
+
+    <script type="text/javascript" src="js/src/bubblExample.js"></script>
+    <script type="text/javascript" src="js/src/circleExample.js"></script>
+    <script type="text/javascript" src="js/src/curveExample.js"></script>
+    <script type="text/javascript" src="js/src/map.js"></script>
+    <script type="text/javascript" src="js/src/pillarExample.js"></script>
+    <script type="text/javascript" src="js/src/polyGonalExample.js"></script>
+    <script type="text/javascript" src="js/src/redaExample.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class = "container">
+    <header>
+        <div class="small-title">
+            <p><span>标题样式</span></p>
+            <p><span>标题样式</span></p>
+            <p><span>标题样式</span></p>
+            <p><span>标题样式</span></p>
+        </div>
+        <div  class="title">大数据监控平台</div>
+        <div class="time" id="showTime"></div>
+    </header>
+    <main>
+        <aside class="left">
+            <header>
+                <h3>板块标题</h3>
+                <div class="boxnav">
+                    <table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <th>业务类型</th>
+                            <th>计划完成</th>
+                            <th>实际完成</th>
+                            <th>增长率</th>
+                        </tr>
+                        <tr>
+                            <td>类型1</td>
+                            <td><span class="text-w">1000万</span></td>
+                            <td><span class="text-b">900万</span></td>
+                            <td>
+                                <div class="text-d">↑12%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>类型1</td>
+                            <td><span class="text-w">1000万</span></td>
+                            <td><span class="text-b">900万</span></td>
+                            <td>
+                                <div class="text-s">↓12%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>类型1</td>
+                            <td><span class="text-w">1000万</span></td>
+                            <td><span class="text-b">900万</span></td>
+                            <td>
+                                <div class="text-d">↑12%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>类型1</td>
+                            <td><span class="text-w">1000万</span></td>
+                            <td><span class="text-b">900万</span></td>
+                            <td>
+                                <div class="text-s">↓12%</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>类型1</td>
+                            <td><span class="text-w">1000万</span></td>
+                            <td><span class="text-b">900万</span></td>
+                            <td>
+                                <div class="text-d">↑12%</div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </header>
+            <footer>
+                <h3>板块标题</h3>
+                <div class="reda">
+                    <div id="reda" style="height:2.5rem;margin-top:0.1rem;"></div>
+                    <!--<ul class="reda-value">
+                        <li>
+                            <div>文本</div>
+                            <p>100</p>
+                        </li>
+                        <li>
+                            <div>文本</div>
+                            <p>100</p>
+                        </li>
+                        <li>
+                            <div>文本</div>
+                            <p>100</p>
+                        </li>
+                        <li>
+                            <div>文本</div>
+                            <p>100</p>
+                        </li>
+                        <li>
+                            <div>文本</div>
+                            <p>100</p>
+                        </li>
+                    </ul>-->
+                </div>
+            </footer>
+        </aside>
+        <section>
+            <div id="map"></div>
+            <ul class="indicators"></ul>
+            <div class="polyGonal"></div>
+        </section>
+        <aside class="right">
+            <header>
+                <h3>板块标题</h3>
+                <div id="coordinate-pillar"></div>
+            </header>
+            <footer>
+                <h3>板块标题</h3>
+                <div class="content">
+                    <div class="left">
+                        <h4 class="text-b">热门话题榜</h4>
+                        <ul>
+                            <li>
+                                1.数据分析 <span class="text-s">↑2167</span>
+                            </li>
+                            <li>
+                                2.云存储 <span class="text-s">↑2167</span>
+                            </li>
+                            <li>
+                                3.视觉分析 <span class="text-d">↓2167</span>
+                            </li>
+                            <li>
+                                4.海量词库 <span class="text-d">↓2167</span>
+                            </li>
+                            <li>
+                                5.云词典 <span class="text-d">2167</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <h4 class="text-b">关键词 — 云</h4>
+                        <div class="tagcloud">
+                            <a class="b01 co01" href="https://gitee.com/iGaoWei/big-data-view">大数据</a>
+                            <a class="b02 co02" href="https://gitee.com/iGaoWei/big-data-view">大数据</a>
+                            <a class="b03 co05" href="https://gitee.com/iGaoWei/big-data-view">大数据</a>
+                            <a class="b04 co02" href="https://gitee.com/iGaoWei/big-data-view">大数据</a>
+                            <a class="b03 co05" href="https://gitee.com/iGaoWei/big-data-view">大数据</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+    </main>
+    <footer>
+        <section>
+            <h3>板块标题</h3>
+            <div class="circle">
+                <div id="circle1" class="half-width"></div>
+                <div id="circle2" class="half-width"></div>
+            </div>
+        </section>
+        <section>
+            <h3>板块标题</h3>
+            <div id = "curve"></div>
+        </section>
+        <section>
+            <h3>板块标题</h3>
+            <div class="finished">
+                <div class="people half-width">
+                    <section>
+                        <p>已完成人数</p>
+                        <p ><span class="text-b">1835</span>人</p>
+                    </section>
+                    <section>
+                        <h5>19%</h5>
+                    </section>
+                </div>
+                <div id="pillar" class="half-width"></div>
+            </div>
+        </section>
+        <section>
+            <h3>板块标题</h3>
+            <!--<div class="circle">
+                <div id="circle3" class="half-width"></div>
+                <div id="circle4" class="half-width"></div>
+            </div>-->
+            <div id="customPillar" style="height:1.9rem;"></div>
+        </section>
+    </footer>
+</div>
+<script>
+    let designH = '909'
+    let designW = '1872'
+
+    scale()
+    function scale (){
+        let screenH = document.documentElement.clientHeight
+        let screenW = document.documentElement.clientWidth
+        // document.getElementsByTagName("body")[0].setAttribute("style",'height:'+screenH+'px')
+
+
+        let scaleV =(screenW/screenH)<(designW/designH)?screenW/designW : screenH/designH
+        console.log('screenW..',screenW)
+        console.log('screenH..',screenH)
+        console.log('designH..',designH)
+        console.log('designW..',designW)
+        console.log('scaleV..',scaleV)
+        console.log("(screenW/screenH)<(designW/designH)",(screenW/screenH)<(designW/designH))
+        console.log("screenW/designW",screenW/designW)
+        console.log("screenH/designH",screenH/designH)
+
+        // document.getElementsByClassName("transform")[0].setAttribute("style","transform:scale("+scaleV+")")
+        document.documentElement.style.fontSize = 100*scaleV+"px"
+        console.log("html  font-size:",document.documentElement.style.fontSize)
+    }
+    window.onresize = function (){
+        scale()
+    }
+    function getDynamicTime() {
+        var t = null;
+        t = setTimeout(time, 1000);//開始运行
+        function time() {
+            clearTimeout(t);//清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours();//获取时
+            var m = dt.getMinutes();//获取分
+            var s = dt.getSeconds();//获取秒
+            document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + " " + h + ":" + m + ":" + s + "";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+    }
+    getDynamicTime()
+    createCircle("circle1", [{ value: 4, name: '20-29岁' },
+        { value: 2, name: '30-39岁' },
+        { value: 2, name: '40-49岁' },
+        { value: 1, name: '50岁以上' }])
+    createCircle("circle2",[{ value: 10, name: '博士' },
+        { value: 20, name: '硕士' },
+        { value: 30, name: '本科' },
+        { value: 40, name: '专科' },])
+    /*createCircle('circle3',[{ value: 4, name: '数据分门别类' },
+        { value: 2, name: '数据关系部门' },
+        { value: 2, name: '今日数据交易' },])
+    createCircle('circle4',[{ value: 10, name: '零销类' },
+        { value: 20, name: '服务类' },
+        { value: 30, name: '销售类' },
+        { value: 40, name: '软件类' },
+        { value: 50, name: '硬件类' },
+        /!*{ value: 60, name: '其它类' },*!/])*/
+    createCurve("curve")
+    createPillar("pillar")
+    createTagCloud(".tagcloud")
+    createPillarWidthCoordinate("coordinate-pillar")
+    createCustomPillar("customPillar")
+    createMap("map")
+    createReda("reda")
+</script>
+</body>
+
+</html>
