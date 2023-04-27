@@ -42,7 +42,7 @@ html{font-size:100px;}
     height:0.85rem;
     flex:1 1 0;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: relative;
 }
@@ -53,11 +53,14 @@ html{font-size:100px;}
     width:100%;
     height:0.85rem;
     line-height: 0.85rem;
-    text-align: center;
+    /*text-align: center;*/
     font-size:0.3rem;
     letter-spacing: -2px;
     color:#daf9ff;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .small-title{
     font-size:0.18rem;
@@ -131,6 +134,26 @@ main >aside>header,main>aside>footer,main>section,footer{
     flex:4 1 2.36rem;
     margin-bottom: 10px;
     position:relative;
+}
+img.bj-1,img.bj-2,img.bj-3,img.bj-4{
+    position: absolute;
+    opacity: 0.5;
+}
+img.bj-1{
+    left: -1px;
+    top: -1px;
+}
+img.bj-2{
+    right: -1px;
+    top: -1px;
+}
+img.bj-3{
+    right: -1px;
+    bottom: -1px;
+}
+img.bj-4{
+    left: -1px;
+    bottom: -1px;
 }
 h3{
     height:0.4rem;
@@ -242,6 +265,7 @@ h4{
     width:10.2rem;
     flex: 5 1 0;
     margin:0 10px;
+    position: relative;
 }
 #map{
     width:100%;
@@ -255,6 +279,7 @@ h4{
     display: flex;
     justify-content: space-between;
     padding:10px;
+    position: relative;
 }
 .container >footer>section{
     width:4.63rem;
@@ -306,7 +331,7 @@ h4{
     font-size:0.2rem;
 }
 .finished section>h5{
-    background: rgba(0,99,169,.8);
+    background: rgba(20,255,68,.5);
     font-size:0.24rem;
     width:0.8rem;
     height:0.8rem;
@@ -323,7 +348,7 @@ h4{
     width:0.9rem;
     height:0.9rem;
     content: "";
-    border:0.03rem solid rgba(0,99,169,.8);
+    border:0.03rem solid rgba(20,255,68,.5);
     border-radius: 0.9rem;
 }
 /*bubble*/

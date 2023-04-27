@@ -126,7 +126,7 @@ function createPillar(selectorId){
             //containLabel: true
         },
         legend: {
-            data: ['等待', '已办人数', '已办业务'],
+            data: ['协调任务', '需求任务', '开发任务'],
             bottom: 0,
             itemWidth: 10,
             itemHeight: 10,
@@ -175,7 +175,7 @@ function createPillar(selectorId){
         ],
         series: [
             {
-                name: '等待',
+                name: '协调任务',
                 type: 'bar',
                 barWidth: '20',
 
@@ -191,7 +191,7 @@ function createPillar(selectorId){
                 barGap: '100%',
                 data: [20],
                 label: {
-                    formatter: "{c}人",
+                    formatter: "{c}项",
                     show: true,
                     position: 'top',
                     textStyle: {
@@ -201,12 +201,12 @@ function createPillar(selectorId){
                 },
             },
             {
-                name: '已办人数',
+                name: '需求任务',
                 type: 'bar',
                 itemStyle: {
                     normal: {
                         show: true,
-                        color: '#f4664e',
+                        color: '#ffe400',
                         barBorderRadius: 50,
                         borderWidth: 0,
                     }
@@ -215,7 +215,7 @@ function createPillar(selectorId){
                 barWidth: '20',
                 data: [40],
                 label: {
-                    formatter: "{c}人",
+                    formatter: "{c}项",
                     show: true,
                     position: 'top',
                     textStyle: {
@@ -225,7 +225,7 @@ function createPillar(selectorId){
                 },
             },
             {
-                name: '已办业务',
+                name: '开发任务',
                 type: 'bar',
                 itemStyle: {
                     normal: {
@@ -239,7 +239,7 @@ function createPillar(selectorId){
                 barWidth: '20',
                 data: [127],
                 label: {
-                    formatter: "{c}份",
+                    formatter: "{c}项",
                     show: true,
                     position: 'top',
                     textStyle: {
